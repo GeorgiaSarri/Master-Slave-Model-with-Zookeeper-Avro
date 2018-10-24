@@ -1,0 +1,20 @@
+{"namespace": "org.thesis.project.avro.rpc.protocol",
+ "protocol": "MasterClient",
+ "doc": "An exchange of data between master and client. Client sends ID and address and Master sends server's address",
+
+ "types": [
+  {"name": "Hello", "type": "record", 
+   "fields": [
+  		{"name": "clientID", "type": "string"},
+  		{"name": "address", "type": "string"}
+  ]}
+ ],
+
+ "messages": {
+	"hello": {
+		"request": [{"name": "hello", "type": "Hello"}],
+		"response": "string"
+	}
+ }
+
+}
