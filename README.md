@@ -50,6 +50,19 @@ that will be analyzed below. The project was implemented on Java and Apache's Zo
   
   ## Execution Steps
   
-  1) Install Apache ZooKeeper from its [official website](http://zookeeper.apache.org "Apache Zookeeper Homepage")
+  1) ZooKeeper:
+        *   Install Apache ZooKeeper from its [official website](http://zookeeper.apache.org "Apache Zookeeper Homepage"). Depending on the operational system different steps are required. Once ZooKeeper is installed we set eviroment variable CLASSPATH for ZooKeeper (run in command line: `ZOOBINDIR="< path to zook file >/bin"."$ZOOBINDIR"/zkEnv.sh` for LINUX or `set ZOOBINDIR="< path to zook file >/bin"` and `call %"$ZOOBINDIR"%.cmd` for windows).
+        * Make a folder where ZooKeeper will write its data and update the variable dataDir in the file zoo.cfg with the path of the location of the folder.
+        * Finally in /bin file of the ZooKeeper we can find two scripts that we can use to run ZooKeeper:
+            1)  zkServer starts ZooKeeper
+            2) zkCli can be used to familiarize with ZooKeeper commands and also to check if the necessary nodes have been created.
+  
+  2) Master:
+  It can be execute through any Java IDE and gets as initial argument the location that the ZooKeeper is running (ex: localhost)
+  
+  3) Server and Client:
+  We can instantiate as many instances of servers or clients as we wish.
+  
+  
   
   
